@@ -136,6 +136,12 @@ private:
     const Fence& operator = (const Fence& rhs) const;
 
     int mFenceFd;
+
+#ifdef MTK_HARDWARE
+private:
+    void dump(int fd);
+#endif
+
 };
 
 }; // namespace android
